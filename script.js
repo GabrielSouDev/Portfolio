@@ -1,7 +1,7 @@
 const main = () => document.getElementById("main-content");
 
 document.addEventListener("DOMContentLoaded", () => 
-    loadComponent("projetos"));
+    loadComponent("contato"));
 
 
 const loadComponent = async (componentName) => {

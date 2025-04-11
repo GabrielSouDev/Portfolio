@@ -41,7 +41,7 @@ html, body {
 
 /* Nav Bar */
 nav{
-    width: 30%;
+    width: 20%;
 }
 
 .nav-buttom{
@@ -68,15 +68,15 @@ nav{
 
 /* Main */
 .main-content{
-    width:70%;
+    width:80%;
     height:100%;
     min-height: 95vh;
-    background: linear-gradient(90deg, rgba(192,3,3,0) 0%, rgb(255, 255, 255) 15%, rgb(255, 255, 255) 100%);
 }
 
 .main{
+    background: linear-gradient(90deg, rgba(192,3,3,0) 0%, rgb(255, 255, 255) 20%, rgb(255, 255, 255) 100%);
     display: flex;
-    margin-top: 2.5rem;
+    margin-top: 2.2rem;
     min-height: 95vh;
 }
 
@@ -117,26 +117,36 @@ nav{
 
 /* Utilitys */
 .divider{
-    width: 75%;
+    width: 95%;
     text-align: end;
     float: right;
     height: 0.7rem;
     background: linear-gradient(90deg, rgba(192,3,3,0) 0%, rgba(255, 51, 51,1) 15%, rgb(255, 51, 51, 1) 100%);
+    background: linear-gradient(90deg,rgba(192,3,3,0) 0%, rgba(255, 51, 51, 0.5) 7%, rgba(255, 51, 51, 1) 20%, rgba(255, 51, 51, 1) 100%);
 }
 
 /* Media Query */
 @media (max-width: 600px) {
+    /* Header */
+    .title{
+        font-size: 3rem;
+    }
+    
+    .subtitle{
+        font-size: 1.3rem;
+    }
+    /* Main */
     .main{
         display: flex;
         flex-direction: column;
+        background-color: white;
     }
 
     .main-content{
         width: 100%;
-        background-color: white;
     }
+    /* Nav Bar */
     nav{
-        padding:0;
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         width:100%;
@@ -145,7 +155,6 @@ nav{
     .nav-buttom{
         display: block;
         text-align: center;
-        z-index: 1;
         background-color: rgba(255, 51, 51,1);
         width:100%;
         padding:0;
@@ -157,10 +166,9 @@ nav{
     }
 
     .nav-buttom-text{
-        padding:0;
         margin:0;
     }
-
+    /* Utilitys */
     .divider{
         width: 100%;
         background: linear-gradient(90deg, rgba(255, 51, 51,1) 15%, rgb(255, 51, 51, 1) 100%);
