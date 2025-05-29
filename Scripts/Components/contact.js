@@ -1,6 +1,6 @@
 export const init = () => {
   emailjs.init({
-    publicKey: 'pT5g-klgLvL1isc7',
+    publicKey: 'pT5g-klgLvL1isc7S',
   });
 
   const form = document.getElementById("email-form");
