@@ -1,3 +1,10 @@
+:root{
+    --primary-color: rgb(255, 51, 51, 1);
+    --primary-color-hover: rgba(255, 100, 100,1);
+    --secondary-color: ;
+    --tertiary-color: ;
+}
+
 /* Reset CSS */
 *{
     /* outline: 1px solid red; */
@@ -42,6 +49,7 @@ html, body {
 /* Nav Bar */
 nav{
     width: 20%;
+    border-right: var(--primary-color) 0.3rem solid;
 }
 
 .nav-buttom{
@@ -49,35 +57,86 @@ nav{
     align-items: center; 
     margin-top: 10px;
     height: 3rem;
-    background: linear-gradient(270deg, rgba(192,3,3,0) 0%, rgba(255, 51, 51,1) 35%, rgb(255, 51, 51, 1) 100%);
+    background-color: var(--primary-color);
+    width: 100%;
 }
 
 .nav-buttom-text{
     margin-left: 10%;
     font-size: 1.5rem;
-    color: #ffffff;
-}
+    color: #fff;
 
-.nav-buttom-text:hover{
-    color: #dbdbdb;
 }
 
 .nav-buttom:hover{
-    background: linear-gradient(270deg, rgba(255, 100, 100, 0) 0%, rgb(255, 100, 100, 1) 35%, rgb(255, 100, 100, 1) 100%);
+    background: linear-gradient(270deg, rgba(255, 255, 255, 0) 0%, var(--primary-color-hover) 35%, var(--primary-color) 100%);
 }
 
 /* Main */
 .main-content{
+    background: #fff;
+    padding: 1rem;
     width:80%;
     height:100%;
     min-height: 95vh;
 }
 
 .main{
-    background: linear-gradient(90deg, rgba(192,3,3,0) 0%, rgb(255, 255, 255) 20%, rgb(255, 255, 255) 100%);
     display: flex;
     margin-top: 2.2rem;
     min-height: 95vh;
+    width: 100%;
+}
+
+/* Contact */
+.contact-form{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+}
+
+.contact-form div{
+    display: flex;
+    padding-bottom: 0.7rem;
+}
+
+.contact-form-label{
+    font-size: 1rem;
+}
+
+.contact-form-name, .contact-form-email{
+    flex: 1;
+}
+
+.contact-form-message{
+    height: 150px;
+}
+
+#success-message, #error-message
+{
+    padding-top: 0.7rem;
+    display: none;
+}
+
+#success-message{
+    color: green;
+}
+
+#error-message
+{
+    color: red;
+}
+
+.contact-form-button{
+    font-size: 1.5rem;
+    height: 2.5rem;
+    background-color: var(--primary-color);
+    border: none;
+    color: #ffffff;
+}
+
+.contact-form-button:hover{
+    background-color: var(--primary-color-hover);
 }
 
 /* Footer */
@@ -98,11 +157,11 @@ nav{
 }
 
 .social-linkedin:hover, .social-github:hover{
-    color: rgb(255, 51, 51, 1);
+    color: var(--primary-color);
 }
 
 .social-icon{
-    color:rgb(255, 51, 51, 1);
+    color:var(--primary-color);
     padding-right: 0.2rem;
 }
 
@@ -116,13 +175,18 @@ nav{
 }
 
 /* Utilitys */
+.component-title{
+    font-weight: bold;
+    font-size: 1.3rem;
+}
+
 .divider{
     width: 95%;
     text-align: end;
     float: right;
     height: 0.7rem;
-    background: linear-gradient(90deg, rgba(192,3,3,0) 0%, rgba(255, 51, 51,1) 15%, rgb(255, 51, 51, 1) 100%);
-    background: linear-gradient(90deg,rgba(192,3,3,0) 0%, rgba(255, 51, 51, 0.5) 7%, rgba(255, 51, 51, 1) 20%, rgba(255, 51, 51, 1) 100%);
+    background: linear-gradient(90deg, rgba(192,3,3,0) 0%, var(--primary-color) 15%);
+
 }
 
 /* Media Query */
@@ -155,22 +219,26 @@ nav{
     .nav-buttom{
         display: block;
         text-align: center;
-        background-color: rgba(255, 51, 51,1);
         width:100%;
         padding:0;
         margin:0;
     }
 
     .nav-buttom:hover{
-        background-color: rgba(255, 51, 51,1);
+        background-color: var(--primary-color);
     }
 
     .nav-buttom-text{
         margin:0;
     }
+    /* Contact */
+    .contact-form{
+        width:100%;
+    }
+
     /* Utilitys */
     .divider{
         width: 100%;
-        background: linear-gradient(90deg, rgba(255, 51, 51,1) 15%, rgb(255, 51, 51, 1) 100%);
+        background-color: var(--primary-color);
     }
 }
