@@ -1,4 +1,4 @@
-import { loadComponent } from '/Scripts/pageLoader.js';
+import { loadComponent } from '/Scripts/componentLoader.js';
 
 document.addEventListener("DOMContentLoaded", () => 
     loadComponent("contact"));
