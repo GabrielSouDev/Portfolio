@@ -24,7 +24,6 @@ html, body {
 
 /* Header */
 .header-title{
-    color: #000000;
     display: flex;
     flex-direction: column;
     align-items: end;
@@ -65,7 +64,6 @@ nav{
     margin-left: 10%;
     font-size: 1.5rem;
     color: var(--secondary-color);
-
 }
 
 .nav-buttom:hover{
@@ -78,7 +76,7 @@ nav{
     padding: 1rem;
     width:80%;
     height:100%;
-    min-height: 95vh;
+    min-height: 100vh;
 }
 
 .main{
@@ -95,8 +93,8 @@ nav{
     align-items: center;
 }
 
-.project-button, .project-button i{
-    border: none;
+.project-button{
+    border: #000000 solid 1px;
     background-color: var(--tertiary-color);
     cursor: pointer;
     font-size: 2rem;
@@ -105,27 +103,38 @@ nav{
 }
 
 .project-item{
-    margin: 0.7rem;
-    padding: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    width:100%;
+    margin: 1rem;
+    padding: 1rem;
     border: #000000 solid 1px;
+    background-color: var(--tertiary-color);
+}
+
+.project-item-info{
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    width:100%;
 }
 
 .project-div-text{
-    margin: 0.7rem;
+    margin: 0 0.7rem 0.7rem 0.7rem;
 }
 
-.project-title, .project-description, .project-technologies{
+.project-description, .project-technologies{
     padding-bottom: 0.1rem;
     font-size: 1rem;
 }
 
 .project-title{
+    padding-bottom: 0.1rem;
     font-size: 1.2rem;
     font-weight: bold;
 }
 
-.project-link-list
-{
+.project-list{
     display: flex;
     flex-direction: row;
     width: 100%;
@@ -134,15 +143,19 @@ nav{
 .project-grid{
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 10px;
+    gap: 0 1rem;
 }
 
-.project-image-list{
-    width: 40%;
-}
-
-.project-image-grid{
+.project-image{
+    display: block;
     width: 100%;
+    height: fit-content;
+}
+
+.project-github{
+    display: flex; 
+    justify-content: flex-end; 
+    margin-top: auto;
 }
 
 /* Contact */
@@ -206,11 +219,11 @@ nav{
 }
 
 .social-linkedin{
-    padding-right: 10px;
+    padding-right: 0.625rem;
 }
 
 .social-github{
-    padding-left: 10px;
+    padding-left: 0.625rem;
 }
 
 .social-linkedin:hover, .social-github:hover{
@@ -277,8 +290,8 @@ nav{
         display: block;
         text-align: center;
         width:100%;
-        padding:0;
-        margin:0;
+        padding:0px;
+        margin:0px;
     }
 
     .nav-buttom:hover{
@@ -300,7 +313,7 @@ nav{
         display: none;
     }
 
-    .project-link-list
+    .project-list
     {
         display: flex;
         flex-direction: column;

@@ -16,14 +16,19 @@ export const init = async () => {
     data.forEach(project => {
         projectsDiv().innerHTML += 
         `<div class="project-item">
-            <a href="${project.link}" target="_blank" class="project-link">
+            <a href="${project.link}" target="_blank">
                 <img src="Images/${project.image}" class="project-image">
-                <div class="project-div-text">
-                    <p class="project-title">${project.title}</p>
-                    <p class="project-description">${project.description}</p>
-                    <p class="project-technologies">${project.technologies}</p>
-                </div>
             </a>
+            <div class="project-item-info">
+                <a href="${project.link}" target="_blank">
+                    <div class="project-div-text">
+                        <p class="project-title">${project.title}</p>
+                        <p class="project-description">${project.description}</p>
+                        <p class="project-technologies">${project.technologies}</p>
+                    </div>
+                </a>
+                <a href="${project.github}" target="_blank" class="social-github project-github"><i class="fa-brands fa-github social-icon"></i>Visualizar no Github</a>
+             </div>
         </div>`
     });
 
@@ -36,27 +41,17 @@ export const init = async () => {
 const orderInList = () =>
 {
     Array.from(projectsCollection()).forEach(project => {
-        const image = project.querySelector(".project-image");
-        const link = project.querySelector(".project-link");
-
-        image.classList.remove("project-image-grid");
         projectsDiv().classList.remove("project-grid");
 
-        image.classList.add("project-image-list");
-        link.classList.add("project-link-list");
+        project.classList.add("project-list");
     });
 };
 
 const orderInGrid = () =>
 {
     Array.from(projectsCollection()).forEach(project => {
-        const image = project.querySelector(".project-image");
-        const link = project.querySelector(".project-link");
+        project.classList.remove("project-list");
 
-        image.classList.remove("project-image-list");
-        link.classList.remove("project-link-list");
-
-        image.classList.add("project-image-grid");
         projectsDiv().classList.add("project-grid");
     });
 };
