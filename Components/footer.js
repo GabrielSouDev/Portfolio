@@ -1,7 +1,7 @@
 import { LoadCSS } from "../Utils/loader.js";
 
 export function Footer(){
-    LoadCSS("../Components/footer.css");
+    LoadCSS("./Components/footer.css");
     return `
     <footer>
         <div class="social">

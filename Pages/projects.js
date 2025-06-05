@@ -1,7 +1,7 @@
 import { LoadCSS } from "../Utils/loader.js";
 
 export function Projects(){
-    LoadCSS("../Pages/projects.css");
+    LoadCSS("./Pages/projects.css");
 
     return `
     <div class="project-title-div">

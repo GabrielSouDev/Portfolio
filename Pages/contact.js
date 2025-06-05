@@ -1,7 +1,7 @@
 import { LoadCSS } from "../Utils/loader.js";
 
 export function Contact(){
-  LoadCSS("../Pages/contact.css");
+  LoadCSS("./Pages/contact.css");
 
   return `
   <p class="component-title">Envie sua Mensagem</p>

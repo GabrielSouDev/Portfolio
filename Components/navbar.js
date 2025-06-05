@@ -1,7 +1,7 @@
 import { LoadCSS } from "../Utils/loader.js";
 
 export function Navbar(){
-    LoadCSS("../Components/navbar.css");
+    LoadCSS("./Components/navbar.css");
 
     return`
     <nav>

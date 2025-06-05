@@ -5,7 +5,7 @@ import { MainContent } from "../Components/maincontent.js";
 import { Footer } from "../Components/footer.js";
 
 export function Layout(){
-    LoadCSS("../Components/layout.css");
+    LoadCSS("./Components/layout.css");
 
     return `
     ${Header()}
