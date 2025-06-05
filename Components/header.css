@@ -1,0 +1,34 @@
+@import url("../app.css");
+
+.header-title{
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    padding-right: 10%;
+    margin-top: 0.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.title{
+    font-size: 3.5rem;
+    font-weight: 600;
+}
+
+.subtitle{
+    display: inline-block;
+    white-space: nowrap;
+    font-size: 1.5rem;
+    margin-left: 35%;
+    font-weight: 500;
+}
+
+@media (max-width: 600px) {
+    /* Header */
+    .title{
+        font-size: 3rem;
+    }
+    
+    .subtitle{
+        font-size: 1.3rem;
+    }
+}

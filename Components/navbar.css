@@ -1,0 +1,49 @@
+@import url("../app.css");
+
+nav{
+    width: 20%;
+    border-right: var(--primary-color) 0.3rem solid;
+}
+
+.nav-buttom{
+    display: flex;
+    align-items: center; 
+    margin-top: 10px;
+    height: 3rem;
+    background-color: var(--primary-color);
+    width: 100%;
+}
+
+.nav-buttom-text{
+    margin-left: 10%;
+    font-size: 1.5rem;
+    color: var(--secondary-color);
+}
+
+.nav-buttom:hover{
+    background: linear-gradient(270deg, rgba(255, 255, 255, 0) 0%, var(--primary-color-hover) 35%, var(--primary-color) 100%);
+}
+
+@media (max-width: 600px) {
+    nav{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        width:100%;
+    }
+
+    .nav-buttom{
+        display: block;
+        text-align: center;
+        width:100%;
+        padding:0px;
+        margin:0px;
+    }
+
+    .nav-buttom:hover{
+        background-color: var(--primary-color);
+    }
+
+    .nav-buttom-text{
+        margin:0;
+    }
+}

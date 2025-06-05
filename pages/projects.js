@@ -1,8 +1,29 @@
+import { LoadCSS } from "../Utils/loader.js";
+
+export function Projects(){
+    LoadCSS("/Pages/projects.css");
+
+    return `
+    <div class="project-title-div">
+        <button id="order-projects-in-list" class="project-button">
+            <i class="fa-solid fa-grip-lines"></i>
+        </button>
+        <button id="order-projects-in-grid" class="project-button">
+            <i class="fa-solid fa-grip"></i>
+        </button>
+        <p class="component-title">Meus projetos</p>
+        </div>
+
+        <div id="projects-div">
+    </div>
+    `
+}
+
 const projectsDiv = () => document.getElementById('projects-div');
 
 const projectsCollection = () => projectsDiv().getElementsByClassName("project-item");
 
-export const init = async () => {
+export const ProjectsInit = async () => {
     const orderInListButton = document.getElementById('order-projects-in-list');
     const orderInGridButton = document.getElementById('order-projects-in-grid');
     

@@ -3,7 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -12,44 +11,9 @@
     <title>Gabriel Souza - Desenvolvedor</title>
 </head>
 <body>
-    <header>
-        <div class="header-title">
-            <div>
-                <h1 class="title">Gabriel Souza</h1>
-                <h2 class="subtitle">Desenvolvedor Back-end</h2>
-            </div>
-        </div>
+    <div id="app">
 
-        <div class="divider"></div>
-    </header>
-
-    <div class="main">
-        <nav>
-            <div class="nav-buttom" onclick="loadComponent('projects')">
-                <p class="nav-buttom-text">Projetos</p>
-            </div>
-            <div class="nav-buttom" onclick="loadComponent('about')">
-                <p class="nav-buttom-text">Sobre</p>
-            </div>
-            <div class="nav-buttom" onclick="loadComponent('contact')">
-                <p class="nav-buttom-text">Contato</p>
-            </div>
-        </nav>
-        <div id="main-content" class="main-content">
-
-        </div>
-    </div>
-
-    <footer>
-        <div class="divider"></div>
-        <div class="social">
-            <a href="http://www.linkedin.com/in/gabriel-souza21" target="_blank" class="social-linkedin"><i class="fa-brands fa-linkedin social-icon"></i>Linkedin</a>
-            <a href="https://github.com/GabrielSouDev" target="_blank" class="social-github"><i class="fa-brands fa-github social-icon"></i>Github</a>
-        </div>
-        <p class="footer-text">&copy Gabriel Souza - Desenvolvedor Back-end</p>
-    </footer>
-    
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
-    <script type="module" src="Scripts/main.js"></script>
+    <script type="module" src="./app.js"></script>
 </body>
 </html>

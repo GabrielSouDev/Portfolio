@@ -1,0 +1,57 @@
+@import url("../app.css");
+
+.contact-form{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+}
+
+.contact-form div{
+    display: flex;
+    padding-bottom: 0.7rem;
+}
+
+.contact-form-label{
+    font-size: 1rem;
+}
+
+.contact-form-name, .contact-form-email{
+    flex: 1;
+}
+
+.contact-form-message{
+    height: 150px;
+}
+
+#success-message, #error-message
+{
+    padding-top: 0.7rem;
+    display: none;
+}
+
+#success-message{
+    color: green;
+}
+
+#error-message
+{
+    color: red;
+}
+
+.contact-form-button{
+    font-size: 1.5rem;
+    height: 2.5rem;
+    background-color: var(--primary-color);
+    border: none;
+    color: var(--secondary-color);
+}
+
+.contact-form-button:hover{
+    background-color: var(--primary-color-hover);
+}
+
+@media (max-width: 600px) {
+    .contact-form{
+        width:100%;
+    }
+}

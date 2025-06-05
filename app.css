@@ -1,0 +1,29 @@
+:root{
+    --primary-color: rgb(255, 51, 51, 1);
+    --primary-color-hover: rgba(255, 100, 100,1);
+    --secondary-color: #fff;
+    --tertiary-color: #dadada;
+}
+
+/* Reset CSS */
+*{
+    /* outline: 1px solid red; */
+    font-family: "Roboto", sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    color: black;
+}
+
+html, body {
+    max-width: 100vw;
+    overflow-x: hidden;
+    background-color: var(--tertiary-color);
+}
+
+/* Utilitys */
+.component-title{
+    font-weight: bold;
+    font-size: 1.3rem;
+}

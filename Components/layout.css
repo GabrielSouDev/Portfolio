@@ -1,0 +1,29 @@
+@import url("../app.css");
+
+.main{
+    display: flex;
+    margin-top: 2.2rem;
+    min-height: 95vh;
+    width: 100%;
+}
+
+.divider{
+    width: 95%;
+    text-align: end;
+    float: right;
+    height: 0.7rem;
+    background: linear-gradient(90deg, rgba(192,3,3,0) 0%, var(--primary-color) 15%);
+}
+
+@media (max-width: 600px) {
+    .main{
+        display: flex;
+        flex-direction: column;
+        background-color: var(--secondary-color);
+    }
+
+    .divider{
+        width: 100%;
+        background-color: var(--primary-color);
+    }
+}
