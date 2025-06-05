@@ -1,8 +1,8 @@
-import { Layout } from "../Components/layout.js";
-import { Projects, ProjectsInit } from "../Pages/projects.js";
-import { About } from "../Pages/about.js";
-import { Contact, ContactInit } from "../Pages/contact.js";
-import { NotFound } from "../Pages/notfound.js";
+import { Layout } from "./Components/layout.js";
+import { Projects, ProjectsInit } from "./Pages/projects.js";
+import { About } from "./Pages/about.js";
+import { Contact, ContactInit } from "./Pages/contact.js";
+import { NotFound } from "./Pages/notfound.js";
 
 const routes = {
     "/": Projects,
