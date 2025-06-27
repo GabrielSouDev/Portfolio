@@ -58,9 +58,10 @@
     grid-template-columns: 1fr 1fr;
     gap: 0 1rem;
 }
-
+    
+    
 .project-image{
-    border: 5px solid var(--secondary-color);
+    border: 5px solid var(--primary-color-hover);
     display: block;
     width: 100%;
     height: fit-content;
