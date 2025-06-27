@@ -1,2 +1,2 @@
 # Portfolio
-Portfólio criado apenas com HTML, CSS e Javascript puro.
+Portfólio criado apenas com HTML, CSS e Javascript Vanilla.

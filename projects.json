@@ -1,0 +1,34 @@
+[{
+    "title": "RH WebApplication",
+    "description": "WebApplication com funções de gerenciamento de RH com cadastro de cargos, funcionarios, geração de holerites, graficos.",
+    "languages":"C#.",
+    "backend":"Asp.net Core com MinimalAPI, Autenticação JTW, Entity.",
+    "frontend":"Blazor WebAssembly, MudBlazor.",
+    "database":"SQL Server.",
+    "image": "RHApplacation.jpg",
+    "github": "https://github.com/GabrielSouDev/RHWebApplication",
+    "link": "https://gsouza.dev"
+},
+{
+    "title": "RelationalGraph.AI",
+    "description": "Exploração recursiva utilizando IA com exibição em esquema de grafo.",
+    "languages":"C# e Javascript.",
+    "backend":"Aspnet Core com Controllers com arquitetura Hexagonal, LLM via OpenRouter.",
+    "frontend":"HTML, Javascript, Cytoscape.",
+    "database":"Neo4j.",
+    "image": "RelationalGraph.jpg",
+    "github": "https://github.com/GabrielSouDev/RelationalGraph.AI",
+    "link": "https://gsouza.dev"
+},
+{
+    "title": "WorkOS",
+    "description": "Este é um projeto de um gerenciador de tarefas focado em agilizar e organizar rotinas de trabalho.",
+    "languages":"C#.",
+    "backend":"Asp.net Core com MinimalAPI, SignalR, Entity.",
+    "frontend":"Blazor Server Side, MudBlazor.",
+    "database":"SQL Server.",
+    "image": "WorkOS.jpg",
+    "github": "https://github.com/GabrielSouDev/WorkOS",
+    "link": "https://gsouza.dev"
+}
+]
