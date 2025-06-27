@@ -1,7 +1,7 @@
 import { LoadCSS } from "../Utils/loader.js";
 
-export function Projects(){
-    LoadCSS("./Pages/projects.css");
+export async function Projects(){
+    await LoadCSS("./Pages/projects.css");
 
     return `
     <div class="project-title-div">
@@ -11,11 +11,10 @@ export function Projects(){
         <button id="order-projects-in-grid" class="project-button">
             <i class="fa-solid fa-grip"></i>
         </button>
-        <p class="component-title">Meus projetos</p>
-        </div>
-
-        <div id="projects-div">
+        <h2 class="component-title">Meus projetos</h2>
     </div>
+
+    <div id="projects-div"></div>
     `
 }
 
@@ -45,7 +44,10 @@ export const ProjectsInit = async () => {
                     <div class="project-div-text">
                         <p class="project-title">${project.title}</p>
                         <p class="project-description">${project.description}</p>
-                        <p class="project-technologies">${project.technologies}</p>
+                        <p class="project-technologies"><strong>Linguagem: </strong>${project.languages}</p>
+                        <p class="project-technologies"><strong>Back-end: </strong>${project.backend}</p>
+                        <p class="project-technologies"><strong>Front-end: </strong>${project.frontend}</p>
+                        <p class="project-technologies"><strong>Banco de dados: </strong>${project.database}</p>
                     </div>
                 </a>
                 <a href="${project.github}" target="_blank" class="social-github project-github"><i class="fa-brands fa-github social-icon"></i>Visualizar no Github</a>
