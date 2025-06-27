@@ -4,22 +4,27 @@ import { Navbar } from "../Components/navbar.js";
 import { MainContent } from "../Components/maincontent.js";
 import { Footer } from "../Components/footer.js";
 
-export function Layout(){
-    LoadCSS("./Components/layout.css");
+export async function Layout() {
+  await LoadCSS("./Components/layout.css");
 
-    return `
-    ${Header()}
+  const headerHTML = await Header();
+  const navbarHTML = await Navbar();
+  const mainContentHTML = await MainContent();
+  const footerHTML = await Footer();
+
+  return `
+    ${headerHTML}
 
     <div class="divider"></div>
 
     <div class="main">
-        ${Navbar()}
+      ${navbarHTML}
 
-        ${MainContent()}
+      ${mainContentHTML}
     </div>
 
     <div class="divider"></div>
 
-    ${Footer()}
-    `;
+    ${footerHTML}
+  `;
 }

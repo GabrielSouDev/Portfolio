@@ -1,6 +1,9 @@
 @import url("../app.css");
 
 .contact-form{
+    background-color: var(--tertiary-color);
+    border: 1px solid black;
+    padding: 1rem;
     display: flex;
     flex-direction: column;
     width: 50%;
@@ -23,8 +26,7 @@
     height: 150px;
 }
 
-#success-message, #error-message
-{
+#success-message, #error-message{
     padding-top: 0.7rem;
     display: none;
 }
@@ -33,8 +35,7 @@
     color: green;
 }
 
-#error-message
-{
+#error-message{
     color: red;
 }
 

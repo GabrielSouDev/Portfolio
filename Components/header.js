@@ -1,7 +1,7 @@
 import { LoadCSS } from "../Utils/loader.js";
 
-export function Header(){
-    LoadCSS("./Components/header.css");
+export async function Header(){
+    await LoadCSS("./Components/header.css");
 
     return `
     <header>

@@ -12,7 +12,7 @@ const routes = {
 }
 
 const jsInit = (path) => {
-    if (path === '/projects') ProjectsInit?.();
+    if (path === '/projects' || path === '/') ProjectsInit?.();
     if (path === '/contact') ContactInit?.();
 }
 
@@ -24,12 +24,14 @@ function getCurrentPath() {
     return window.location.hash.replace("#", "") || "/";
 }
 
-function router(){
+async function router(){
     const path = getCurrentPath();
     const route = routes[path] || NotFound;
 
-    document.getElementById("app").innerHTML = Layout();
-    document.getElementById("main-content").innerHTML = route();
+    document.getElementById("app").innerHTML = await Layout();
+    await new Promise(requestAnimationFrame);
+
+    document.getElementById("main-content").innerHTML = await route();
 
     jsInit(path);
 
@@ -42,5 +44,5 @@ function router(){
     });
 }
 
-window.addEventListener("hashchange", router);
 window.addEventListener("load", router);
+window.addEventListener("hashchange", router);

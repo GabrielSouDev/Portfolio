@@ -1,7 +1,7 @@
 import { LoadCSS } from "../Utils/loader.js";
 
-export function Navbar(){
-    LoadCSS("./Components/navbar.css");
+export async function Navbar(){
+    await LoadCSS("./Components/navbar.css");
 
     return`
     <nav>

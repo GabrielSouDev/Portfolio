@@ -1,10 +1,10 @@
 import { LoadCSS } from "../Utils/loader.js";
 
-export function Contact(){
-  LoadCSS("./Pages/contact.css");
+export async function Contact(){
+  await LoadCSS("./Pages/contact.css");
 
   return `
-  <p class="component-title">Envie sua Mensagem</p>
+  <h2 class="component-title">Envie sua Mensagem</h2>
 
   <form id="email-form" class="contact-form">
     <div>

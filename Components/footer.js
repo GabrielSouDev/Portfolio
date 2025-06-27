@@ -1,7 +1,8 @@
 import { LoadCSS } from "../Utils/loader.js";
 
-export function Footer(){
-    LoadCSS("./Components/footer.css");
+export async function Footer(){
+    await LoadCSS("./Components/footer.css");
+    
     return `
     <footer>
         <div class="social">
