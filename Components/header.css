@@ -4,7 +4,8 @@
     display: flex;
     flex-direction: column;
     align-items: end;
-    padding-right: 10%;
+    padding-right: 13vw;
+    white-space: nowrap;
     margin-top: 0.5rem;
     margin-bottom: 1.5rem;
 }
@@ -18,17 +19,26 @@
     display: inline-block;
     white-space: nowrap;
     font-size: 1.5rem;
-    margin-left: 35%;
+    padding-left: 35%;
     font-weight: 500;
 }
 
+
 @media (max-width: 600px) {
     /* Header */
+    .header-title{
+        align-items: center;
+        margin-top: 0.5rem;
+        margin-bottom: 1.5rem;
+        padding-right: 7%;
+    }
+
     .title{
-        font-size: 3rem;
+        font-size: 2.5rem;
     }
     
     .subtitle{
         font-size: 1.3rem;
+        padding-left: 15%;
     }
 }
