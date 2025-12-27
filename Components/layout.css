@@ -8,8 +8,7 @@
 
 .divider{
     display: block;
-    width: 100%;
-    margin: 0 15px;
+    margin: 0 35px;
     text-align: center;
     height: 0.5rem;
     background-color:  var(--primary-color);
