@@ -1,9 +1,14 @@
 @import url("../app.css");
 
 .project-title-div{
+    width: 100%;
     display: flex;
     gap:10px; 
     align-items: center;
+}
+
+.project-buttons{
+    margin-left: auto;
 }
 
 .project-button{
@@ -13,6 +18,7 @@
     font-size: 2rem;
     width: 3rem;
     height: 3rem;
+    border-radius: 25%;
 }
 
 .project-item{
@@ -55,7 +61,7 @@
 
 .project-grid{
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
     gap: 0 1rem;
 }
     

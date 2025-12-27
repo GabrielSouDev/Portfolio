@@ -1,26 +1,24 @@
 @import url("../app.css");
 
+header{
+    margin: 25px 0;
+}
+
 .header-title{
     display: flex;
     flex-direction: column;
-    align-items: end;
-    padding-right: 13vw;
-    white-space: nowrap;
-    margin-top: 0.5rem;
-    margin-bottom: 1.5rem;
+    align-items: center;
+    text-align: center;
 }
 
 .title{
-    font-size: 3.5rem;
-    font-weight: 600;
+    font-size: 2.3rem;
+    font-weight: bold;
 }
 
 .subtitle{
-    display: inline-block;
-    white-space: nowrap;
-    font-size: 1.5rem;
-    padding-left: 35%;
-    font-weight: 500;
+    font-size: 1rem;
+    font-weight: 100;
 }
 
 

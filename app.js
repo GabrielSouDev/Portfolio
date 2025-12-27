@@ -16,6 +16,18 @@ const jsInit = (path) => {
     if (path === '/contact') ContactInit?.();
 }
 
+function setActiveNav(path) {
+  const buttons = document.querySelectorAll(".nav-buttom");
+  buttons.forEach(btn => {
+    const link = btn.getAttribute("data-link");
+    if (link === path) {
+      btn.classList.add("active");
+    } else {
+      btn.classList.remove("active");
+    }
+  });
+}
+
 function navigateTo(url){
     window.location.hash = `#${url}`;
 }
@@ -31,7 +43,9 @@ async function router(){
     document.getElementById("app").innerHTML = await Layout();
     await new Promise(requestAnimationFrame);
 
-    document.getElementById("main-content").innerHTML = await route();
+    const mainContent = document.getElementById("main-content");
+    mainContent.innerHTML = await route()
+    mainContent.classList.add("fade-in");
 
     jsInit(path);
 
@@ -42,6 +56,8 @@ async function router(){
             navigateTo(url);
         });
     });
+
+    setActiveNav(path);
 }
 
 window.addEventListener("load", router);

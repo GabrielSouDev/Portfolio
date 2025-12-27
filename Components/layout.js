@@ -13,18 +13,19 @@ export async function Layout() {
   const footerHTML = await Footer();
 
   return `
-    ${headerHTML}
-
-    <div class="divider"></div>
-
+    ${navbarHTML}
     <div class="main">
-      ${navbarHTML}
+      ${headerHTML}
+      <div>
+        <div class="divider"></div>
+      </div>
 
       ${mainContentHTML}
+
+      <div>
+        <div class="divider"></div>
+      </div>
+      ${footerHTML}
     </div>
-
-    <div class="divider"></div>
-
-    ${footerHTML}
   `;
 }

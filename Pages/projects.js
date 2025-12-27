@@ -5,13 +5,16 @@ export async function Projects(){
 
     return `
     <div class="project-title-div">
-        <button id="order-projects-in-list" class="project-button">
-            <i class="fa-solid fa-grip-lines"></i>
-        </button>
-        <button id="order-projects-in-grid" class="project-button">
-            <i class="fa-solid fa-grip"></i>
-        </button>
         <h2 class="component-title">Meus projetos</h2>
+
+        <div class="project-buttons">
+            <button id="order-projects-in-list" class="project-button">
+                <i class="fa-solid fa-grip-lines"></i>
+            </button>
+            <button id="order-projects-in-grid" class="project-button">
+                <i class="fa-solid fa-grip"></i>
+            </button>
+        </div>
     </div>
 
     <div id="projects-div"></div>
@@ -27,7 +30,7 @@ export const ProjectsInit = async () => {
     const orderInGridButton = document.getElementById('order-projects-in-grid');
     
     console.log("Componente iniciado");
-    const response = await fetch("../projects.json")
+    const response = await fetch("./projects.json") // alterar para ../
     if(!response.ok)
         throw Error("Projects.json não encontrado!");
     

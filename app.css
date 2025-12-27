@@ -1,5 +1,24 @@
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans&family=Sora:wght@600&display=swap');
 
+.fade-in {
+  opacity: 0;
+  transform: translateY(16px);
+  animation: fadeSlideIn 0.3s ease forwards;
+}
+
+@keyframes fadeSlideIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+#app{
+    display: flex;
+    flex-direction: row; 
+    min-height: 100vh;
+}
+
 body {
     font-family: 'IBM Plex Sans', sans-serif;
 }
@@ -10,7 +29,7 @@ h1, h2, h3 {
 }
 
 :root {
-    --primary-color: #ff6b6b;               /* Coral */
+    --primary-color: #ff6b6b;
     --primary-color-hover: #ffa8a8;
     --secondary-color: #ffffff;
     --tertiary-color: #f9f9f9;
