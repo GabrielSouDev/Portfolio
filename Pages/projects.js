@@ -1,8 +1,9 @@
 import { LoadCSS } from "../Utils/loader.js";
+import { getProjectItem } from "../Components/projectitem.js";
 
 export async function Projects(){
     await LoadCSS("./Pages/projects.css");
-
+    await LoadCSS("../Components/projectitem.css");
     return `
     <div class="project-title-div">
         <h2 class="component-title">Meus projetos</h2>
@@ -29,34 +30,14 @@ export const ProjectsInit = async () => {
     const orderInListButton = document.getElementById('order-projects-in-list');
     const orderInGridButton = document.getElementById('order-projects-in-grid');
     
-    console.log("Componente iniciado");
     const response = await fetch("./projects.json") // alterar para ../
     if(!response.ok)
         throw Error("Projects.json não encontrado!");
     
     const data = await response.json();
 
-    data.forEach(project => {
-        projectsDiv().innerHTML += 
-        `<div class="project-item">
-            <a href="${project.link}" target="_blank">
-                <img src="Images/${project.image}" class="project-image">
-            </a>
-            <div class="project-item-info">
-                <a href="${project.link}" target="_blank">
-                    <div class="project-div-text">
-                        <p class="project-title">${project.title}</p>
-                        <p class="project-description">${project.description}</p>
-                        <p class="project-technologies"><strong>Linguagem: </strong>${project.languages}</p>
-                        <p class="project-technologies"><strong>Back-end: </strong>${project.backend}</p>
-                        <p class="project-technologies"><strong>Front-end: </strong>${project.frontend}</p>
-                        <p class="project-technologies"><strong>Banco de dados: </strong>${project.database}</p>
-                    </div>
-                </a>
-                <a href="${project.github}" target="_blank" class="social-github project-github"><i class="fa-brands fa-github social-icon"></i>Visualizar no Github</a>
-             </div>
-        </div>`
-    });
+    data.forEach(project => 
+        projectsDiv().innerHTML += getProjectItem(project));
 
     orderInList();
 
