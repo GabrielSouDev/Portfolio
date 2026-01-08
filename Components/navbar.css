@@ -4,6 +4,7 @@ nav{
     width: 12vw;
     min-height: 100vh;
     background-color: var(--primary-color);
+    z-index: 999;
 }
 
 .nav-buttons{
@@ -36,24 +37,15 @@ nav{
 
 @media (max-width: 600px) {
     nav{
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        width:100%;
+
+        position: fixed;
+        top: 0;
+        left: -250px; 
+        width:35vw;
+        transition: left 0.3s ease;
     }
 
-    .nav-buttom{
-        display: block;
-        text-align: center;
-        width:100%;
-        padding:0px;
-        margin:0px;
-    }
-
-    .nav-buttom:hover{
-        background-color: var(--primary-color);
-    }
-
-    .nav-buttom-text{
-        margin:0;
+    nav.open{
+        left: 0; 
     }
 }

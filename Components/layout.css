@@ -14,10 +14,45 @@
     background-color:  var(--primary-color);
 }
 
+#hamburguer-button{
+    display: none;
+}
+
 @media (max-width: 600px) {
     .main{
         display: flex;
         flex-direction: column;
         background-color: var(--secondary-color);
     }
+
+    #hamburguer-button {
+        display: block;
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 15vw;
+        height: 15vw;
+        z-index: 9999;
+    }
+
+    #hamburguer-button button,
+    #hamburguer-button button:focus {
+        width: 100%;
+        outline: none;
+        height: 100%;
+        border: none;
+        background-color: transparent;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        box-shadow: none;
+        -webkit-tap-highlight-color: transparent;
+    }
+
+    #hamburguer-button button i {
+        font-size: 2rem;
+        color: black;
+    }
+
 }

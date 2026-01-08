@@ -40,8 +40,18 @@ async function router(){
     const path = getCurrentPath();
     const route = routes[path] || NotFound;
 
-    document.getElementById("app").innerHTML = await Layout();
+    const app = document.getElementById("app");
+    app.innerHTML = await Layout();
     await new Promise(requestAnimationFrame);
+
+    const btn = app.querySelector("#hamburguer-button button");
+    const nav = app.querySelector("nav");
+
+    if (btn) {
+      btn.addEventListener("click", () => {
+        nav.classList.toggle("open");
+      });
+    }
 
     const mainContent = document.getElementById("main-content");
     mainContent.innerHTML = await route()

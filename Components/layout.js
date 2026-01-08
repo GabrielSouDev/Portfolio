@@ -15,6 +15,12 @@ export async function Layout() {
   return `
     ${navbarHTML}
     <div class="main">
+      <div id="hamburguer-button">
+        <button>
+          <i class="fa-solid fa-grip-lines"></i>
+        </button>
+      </div>
+
       ${headerHTML}
       <div>
         <div class="divider"></div>
@@ -29,3 +35,4 @@ export async function Layout() {
     </div>
   `;
 }
+
